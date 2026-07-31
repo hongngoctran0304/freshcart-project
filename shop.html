@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="dist/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/price_range_style.css">
+    <link rel="stylesheet" href="css/jquery.ez-plus.css">
+    <link rel="stylesheet" href="css/zoom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="container-fluid">
+        <div class="top-bar py-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 text-center text-lg-start">Ưu đãi siêu giá trị - Tiết kiệm nhiều hơn với phiếu giảm giá</div>
+                    <div class="col-6 text-end d-none d-lg-block">Gọi cho chúng tôi 24/7 : (+91) 9876-543-210</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Signup Modal -->
+        <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                <h5 class="h4 fw-bold text-title" id="userModalLabel">Sign Up</h5>     
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="mb-3 sign-up">
+                    <label for="fullName" class="form-label text-main fw-6">Họ Tên</label>
+                    <input type="text" class="form-control fs-default text-sub" id="fullName" placeholder="Họ và tên" required="">
+                    </div>
+                    <div class="mb-3 sign-up">
+                    <label for="email" class="form-label text-main fw-6">Địa chỉ email</label>
+                    <input type="email" class="form-control fs-default text-sub" id="email" placeholder="Địa chỉ email" required="">
+                    </div>
+        
+                    <div class="mb-4 sign-up">
+                    <label for="password" class="form-label text-main fw-6">Mật khẩu</label>
+                    <input type="password" class="form-control fs-default" id="password" placeholder="Mật khẩu" required="">
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </form>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+        
+                Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
+                </div>
+            </div>
+            </div>
+        </div>
+          <!-- End Signup -->
+    
+          <!-- Cart Modal -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header border-bottom">
+                <div class="text-start">
+                <h5 id="offcanvasRightLabel" class="mb-0 h6 text-title fw-6">Shop Cart</h5>
+                <small class="text-sub">Mã hàng 382480</small>
+                </div>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        <div class="offcanvas-body">
+        
+            <div>
+            
+            <div class="alert alert-danger p-2" role="alert">
+                Bạn có một voucher miễn phí. Hãy <a href="#!" class="alert-link">kiểm tra đơn hàng ngay!</a>
+            </div>
+    
+            <ul>           
+                <li class="py-3 ps-0 border-top cart-item">
+                <!-- row -->
+                    <div class="row align-items-center">
+        
+                    <div class="col-6 col-md-6">
+                        <div class="d-flex">
+                            <img src="images/product/product-img-1.jpg" alt="" class="sm-frame cart-img">
+                                <div class="ms-3">
+                        
+                                    <a href="#!">
+                                    <h6 class="mb-0 fs-default text-title fw-6">Haldiram's Sev Bhujia</h6>
+                                    </a>
+                                    <span><small class="text-sub">50g</small></span>
+                        
+                                    <div class="fs-default"> 
+                                        <a href="#!">
+                                        <span class="align-text-bottom">
+                                            <small><i class="fa-solid fa-trash text-primary"></i>&nbsp;</small>
+                                        </span>
+                                        <span class="text-sub align-text-bottom"><small>Remove</small></span>
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- input group -->
+                    <div class="col-4 col-md-3 col-lg-3 cart">
+                        <div class="qunt-btn d-flex">
+                            <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="1" class="text-center quanty">
+                            <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+    
+                        <!-- price -->
+                        <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                            <span class="fw-bold text-dark">52.000đ</span>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- list group -->
+                <li class="py-3 ps-0 border-top cart-item">
+                <!-- row -->
+                    <div class="row align-items-center">
+        
+                    <div class="col-6 col-md-6">
+                        <div class="d-flex">
+                            <img src="images/product/product-img-2.jpg" alt="" class="sm-frame cart-img">
+                                <div class="ms-3">
+                        
+                                    <a href="#!">
+                                    <h6 class="mb-0 fs-default text-title fw-6">NutriChoice Digestive</h6>
+                                    </a>
+                                    <span><small class="text-sub">250g</small></span>
+                        
+                                    <div class="fs-default"> 
+                                        <a href="#!">
+                                        <span class="align-text-bottom">
+                                            <small><i class="fa-solid fa-trash text-primary"></i>&nbsp;</small>
+                                        </span>
+                                        <span class="text-sub align-text-bottom"><small>Remove</small></span>
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- input group -->
+                    <div class="col-4 col-md-3 col-lg-3 cart">
+                        <div class="qunt-btn d-flex">
+                            <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="1" class="text-center quanty">
+                            <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+    
+                        <!-- price -->
+                        <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                            <span class="fw-bold text-danger">70.000đ</span>
+                            <div class="text-decoration-line-through text-sub fs-default">150.000đ</div>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- list group -->
+                <li class="py-3 ps-0 border-top cart-item">
+                <!-- row -->
+                    <div class="row align-items-center">
+        
+                        <div class="col-6 col-md-6">
+                            <div class="d-flex">
+                                    <img src="images/product/product-img-3.jpg" alt="" class="sm-frame cart-img">
+                                <div class="ms-3">
+                        
+                                    <a href="#!">
+                                    <h6 class="mb-0 fs-default text-title fw-6">Cadbury 5 Star Chocolate</h6>
+                                    </a>
+                                    <span><small class="text-sub">250g</small></span>
+                        
+                                    <div class="fs-default"> 
+                                        <a href="#!">
+                                        <span class="align-text-bottom">
+                                            <small><i class="fa-solid fa-trash text-primary"></i>&nbsp;</small>
+                                        </span>
+                                        <span class="text-sub align-text-bottom"><small>Remove</small></span>
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- input group -->
+                        <div class="col-4 col-md-3 col-lg-3 cart">
+                            <div class="qunt-btn d-flex">
+                                <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" value="1" class="text-center quanty">
+                                <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+    
+                        <!-- price -->
+                        <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                            <span class="fw-bold text-dark">320.000đ</span>
+                            <div class="text-decoration-line-through text-sub fs-default">370.000đ</div>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- list group -->
+                <li class="py-3 ps-0 border-top cart-item">
+                    <!-- row -->
+                        <div class="row align-items-center">
+            
+                            <div class="col-6 col-md-6">
+                                <div class="d-flex">
+                                        <img src="images/product/product-img-4.jpg" alt="" class="sm-frame cart-img">
+                                    <div class="ms-3">
+                            
+                                        <a href="#!">
+                                        <h6 class="mb-0 fs-default text-title fw-6">Onion Flavour Potato</h6>
+                                        </a>
+                                        <span><small class="text-sub">250g</small></span>
+                            
+                                        <div class="fs-default"> 
+                                            <a href="#!">
+                                            <span class="align-text-bottom">
+                                                <small><i class="fa-solid fa-trash text-primary"></i>&nbsp;</small>
+                                            </span>
+                                            <span class="text-sub align-text-bottom"><small>Remove</small></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- input group -->
+                        <div class="col-4 col-md-3 col-lg-3 cart">
+                            <div class="qunt-btn d-flex">
+                                <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" value="1" class="text-center quanty">
+                                <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+    
+                        <!-- price -->
+                        <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                            <span class="fw-bold text-dark">120.000đ</span>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- list group -->
+                <li class="py-3 ps-0 border-top cart-item">
+                    <!-- row -->
+                        <div class="row align-items-center">
+            
+                            <div class="col-6 col-md-6">
+                                <div class="d-flex">
+                                    <img src="images/product/product-img-5.jpg" alt="" class="sm-frame cart-img">
+                                    <div class="ms-3">
+                            
+                                        <a href="#!">
+                                        <h6 class="mb-0 fs-default text-title fw-6">Onion Flavour Potato</h6>
+                                        </a>
+                                        <span><small class="text-sub">250g</small></span>
+                            
+                                        <div class="fs-default"> 
+                                            <a href="#!">
+                                            <span class="align-text-bottom">
+                                                <small><i class="fa-solid fa-trash text-primary"></i>&nbsp;</small>
+                                            </span>
+                                            <span class="text-sub align-text-bottom"><small>Remove</small></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- input group -->
+                        <div class="col-4 col-md-3 col-lg-3 cart">
+                            <div class="qunt-btn d-flex">
+                                <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" value="1" class="text-center quanty">
+                                <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+    
+                        <!-- price -->
+                        <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                            <span class="fw-bold text-dark">120.000đ</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    
+            <!-- btn -->
+            <div class="d-flex justify-content-between mt-4">
+                <a href="#!" class="btn btn-primary fs-default">Tiếp tục mua</a>
+                <a href="#!" class="btn btn-dark fs-default">Cập nhật giỏ hàng</a>
+            </div>
+        
+            </div>
+        </div>
+        </div>
+          <!-- End Cart Modal -->
+
+          <!-- Back to top -->
+            <div>
+                <a href="#top" class="backtotop"><i class="fa-solid fa-circle-chevron-up"></i></a>
+            </div>
+
+
+    <div class="mid-bar">
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-3 logo ">
+                    <a href="index.html"><img src="images/logo/freshcart-logo.svg" alt="freshcart"></a>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-5 offset-xl-1 offset-md-1 form-search">
+                    <div class="row">
+                        <div class="col-10">
+                            <input type="text" placeholder="Tìm sản phẩm">
+                        </div>
+                        <div class="col-2">
+                            <button class="text-sub"><i class="fa-solid fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 col-9 offset-xl-1 nav-icon">
+                    <ul>                    
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#userModal"><i class="fa-solid fa-user"></i></a></li>
+                        <li>
+                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasExample">
+                                <i class="fa-solid fa-cart-shopping">
+                                    <span class="badge bg-primary">2</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-heart">
+                                    <span class="badge bg-primary">5</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li><a href="#" id="btn-nav"><i class="fa-solid fa-bars"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-nav " id="header">
+            <div class="row">
+                <div class="col-12 d-md-none my-3">
+                    <a href="index.html"><img src="images/logo/freshcart-logo.svg" alt="freshcart"></a>
+                    <button class="sidebarclose">
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div class="nav-search">
+                        <div class="row">
+                            <div class="col-10 d-md-none">
+                                <input type="text" placeholder="Tìm sản phẩm">
+                            </div>
+                            <div class="col-2 d-md-none ">
+                                <button><i class="fa-solid fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <ul class="main-nav">
+                        <li><a href="index.html" class="menu-item">Trang chủ</a></li>
+                        <li><a href="shop.html" class="menu-item">Sản phẩm</a></li>
+                        <li class="dropdown">
+                            <a href="#!" class="dropdown-toggle show menu-item" data-bs-toggle="dropdown">Danh mục</a>
+                            <div class="dropdown-menu mega-menu pb-0">
+                                <div class="row p-2 p-lg-4">
+                                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h6 class="text-primary">Sữa, Bánh mì & Trứng</h6>
+                                        <a href="#" class="dropdown-item">Bơ</a>
+                                        <a href="#" class="dropdown-item">Sữa</a>
+                                        <a href="#" class="dropdown-item">Sữa chua</a>
+                                        <a href="#" class="dropdown-item">Trứng</a>
+                                        <a href="#" class="dropdown-item">Phô mai</a>
+                                        <a href="#" class="dropdown-item">Sữa đặc</a>
+                                        <a href="#" class="dropdown-item">Các chế phẩm từ sữa</a>
+                                        <a href="#" class="dropdown-item">Bánh</a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                                        
+                                            <h6 class="text-primary">Sữa, Bánh mì & Trứng</h6>
+                                            <a href="#" class="dropdown-item">Bơ</a>
+                                            <a href="#" class="dropdown-item">Sữa</a>
+                                            <a href="#" class="dropdown-item">Sữa chua</a>
+                                            <a href="#" class="dropdown-item">Trứng</a>
+                                            <a href="#" class="dropdown-item">Phô mai</a>
+                                            <a href="#" class="dropdown-item">Sữa đặc</a>
+                                            <a href="#" class="dropdown-item">Các chế phẩm từ sữa</a>
+                                            <a href="#" class="dropdown-item">Bánh</a>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                                        
+                                            <h6 class="text-primary">Sữa, Bánh mì & Trứng</h6>
+                                            <a href="#" class="dropdown-item">Bơ</a>
+                                            <a href="#" class="dropdown-item">Sữa</a>
+                                            <a href="#" class="dropdown-item">Sữa chua</a>
+                                            <a href="#" class="dropdown-item">Trứng</a>
+                                            <a href="#" class="dropdown-item">Phô mai</a>
+                                            <a href="#" class="dropdown-item">Sữa đặc</a>
+                                            <a href="#" class="dropdown-item">Các chế phẩm từ sữa</a>
+                                            <a href="#" class="dropdown-item">Bánh</a>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">                                        
+                                            <img src="images/banner/menu-banner.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li><a href="blog.html" class="menu-item">Tin tức</a></li>
+                        <li><a href="#!" class="menu-item">Giới thiệu</a></li>
+                        <li><a href="#!"class="menu-item">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+            </div>        
+        </div>
+    </div>
+
+    <!-- Main -->
+
+    <main>
+
+        <!-- Breadcrumb -->
+        <div class="mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Trang chủ</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#!">Sản phẩm</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#!" class="active-text">Đồ ăn vặt & Đồ ăn nhẹ</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row  gx-5">
+                <div class="col-lg-3">
+                    <button id="btnsidebar" class="btn btn-warning">
+                        <i class="fa-solid fa-gears"></i>
+                    </button>
+                    <div class="sidebar">
+                        <button id="sidebarclose">
+                            <i class="fa-solid fa-close"></i>
+                        </button>
+                        <div class="filter-group">
+                            <h5 class="filter-title">Danh mục</h5>
+
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" >
+                                        Đồ ăn nhẹ & Đồ ăn vặt
+                                      </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Bánh</a></li>
+                                            <li><a href="#">Kẹo</a></li>
+                                            <li><a href="#">Sô cô la</a></li>
+                                            <li><a href="#">Khoai tây</a></li>
+                                            <li><a href="#">Bắp rang</a></li>
+                                            <li><a href="#">Trái cây sấy</a></li>
+                                            <li><a href="#">Thanh năng lượng</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true">
+                                        Bữa sáng & Ngũ cốc
+                                      </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Ngũ cốc</a></li>
+                                            <li><a href="#">Bánh nướng</a></li>
+                                            <li><a href="#">Yogurt</a></li>
+                                            <li><a href="#">Khoai tây</a></li>
+                                            <li><a href="#">Bắp rang</a></li>
+                                            <li><a href="#">Trái cây sấy</a></li>
+                                            <li><a href="#">Thanh năng lượng</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true">
+                                        Sữa, Bánh mì & Trứng
+                                      </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Bánh mì</a></li>
+                                            <li><a href="#">Sữa</a></li>
+                                            <li><a href="#">Trứng</a></li>
+                                            <li><a href="#">Bơ</a></li>
+                                            <li><a href="#">Phô mai</a></li>
+                                            <li><a href="#">Kem các loại</a></li>
+                                            <li><a href="#">Sữa đặc</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true">
+                                        Đồ ăn nhẹ & Đồ ăn vặt
+                                      </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Bánh</a></li>
+                                            <li><a href="#">Kẹo</a></li>
+                                            <li><a href="#">Sô cô la</a></li>
+                                            <li><a href="#">Khoai tây</a></li>
+                                            <li><a href="#">Bắp rang</a></li>
+                                            <li><a href="#">Trái cây sấy</a></li>
+                                            <li><a href="#">Thanh năng lượng</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true">
+                                        Sữa, Bánh mì & Trứng
+                                      </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Bánh mì</a></li>
+                                            <li><a href="#">Sữa</a></li>
+                                            <li><a href="#">Trứng</a></li>
+                                            <li><a href="#">Bơ</a></li>
+                                            <li><a href="#">Phô mai</a></li>
+                                            <li><a href="#">Kem các loại</a></li>
+                                            <li><a href="#">Sữa đặc</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true">
+                                        Bữa sáng & Ngũ cốc
+                                      </button>
+                                    </h2>
+                                    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Ngũ cốc</a></li>
+                                            <li><a href="#">Bánh nướng</a></li>
+                                            <li><a href="#">Yogurt</a></li>
+                                            <li><a href="#">Khoai tây</a></li>
+                                            <li><a href="#">Bắp rang</a></li>
+                                            <li><a href="#">Trái cây sấy</a></li>
+                                            <li><a href="#">Thanh năng lượng</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button fs-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true">
+                                        Đồ ăn nhẹ & Đồ ăn vặt
+                                      </button>
+                                    </h2>
+                                    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <ul>
+                                            <li><a href="#">Bánh</a></li>
+                                            <li><a href="#">Kẹo</a></li>
+                                            <li><a href="#">Sô cô la</a></li>
+                                            <li><a href="#">Khoai tây</a></li>
+                                            <li><a href="#">Bắp rang</a></li>
+                                            <li><a href="#">Trái cây sấy</a></li>
+                                            <li><a href="#">Thanh năng lượng</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <h5 class="filter-title mb-4">Giá</h5>
+                            <div>
+                                <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+    
+                                <div style="margin:20px auto">
+                                    <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" id="min_price" class="price-range-field" />
+                                    <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" id="max_price" class="price-range-field" />
+                                </div>
+                                <button class="price-range-search fs-default" id="price-range-submit">Search</button>
+                                <div id="searchResults" class="search-results-block sm-txt"></div>
+                            </div>
+
+                            <h5 class="filter-title">Sản phẩm nổi bật</h5>
+                            <div class="recommend-pr">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/product/product-img-13.jpg" alt="" class="w-100">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="fs-default text-title mb-0 mt-2">Dứa vàng</h6>
+                                        <div class="rating text-warning">
+                                            
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            
+                                        </div>
+                                        <p class="text-primary">30.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/product/straw.png" alt="" class="w-100">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="fs-default text-title mb-0 mt-2">Dâu tây</h6>
+                                        <div class="rating text-warning">
+                                            
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            
+                                        </div>
+                                        <p class="text-primary">300.000đ</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/product/papaya.jpg" alt="" class="w-100">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="fs-default text-title mb-0 mt-2">Đu đủ vàng</h6>
+                                        <div class="rating text-warning">
+                                            
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            
+                                        </div>
+                                        <p class="text-primary">30.000đ</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/product/Pom.jpg" alt="" class="w-100">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="fs-default text-title mb-0 mt-2">Lựu Ấn Độ</h6>
+                                        <div class="rating text-warning">
+                                           
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            
+                                        </div>
+                                        <p class="text-primary">280.000đ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-title aside-banner ">
+                                <h3 class="h3 text-title fw-6 mb-0">Trái cây tươi</h3>
+                                <p>Giảm giá tới 25%</p>
+                                <button class="main-btn mt-0 fs-default">Mua ngay &nbsp; <small><i class="fa-solid fa-arrow-right "></i></small></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <section class="col-lg-9">
+                    <div class="card mb-4 border-0">
+                        <div class="card-body shop-cat">
+                            <h2 class="mb-0 fw-6 text-title ">Đồ ăn nhẹ & Đồ ăn vặt</h2>
+                        </div>
+                    </div>
+
+                    <div class="d-lg-flex justify-content-between align-items-center">
+                        <div class="mb-3 mb-lg-0">
+                            <p class="mb-0">Tìm được 
+                                <span class="text-dark">10</span>
+                                <span>sản phẩm</span>
+                            </p>
+                        </div>
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <div class="shop-tab">
+                                    <ul class="nav nav-pills">   
+                                        <li class="nav-item">
+                                          <a class="nav-link active" href="#shop-tab-pane1" data-bs-toggle="tab">
+                                            <i class="fa-brands fa-microsoft"></i>
+                                          </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-sub" href="#shop-tab-pane2" data-bs-toggle="tab">
+                                              <i class="fa-solid fa-list"></i>
+                                            </a>
+                                        </li>
+                                    </ul>                               
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex mt-2 mt-lg-0">
+                                <div class="d-flex mt-2 mt-lg-0">
+                                    <select class="form-select fs-default text-title py-2">
+                                        <option selected>Hiển thị: 50</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="shop-tab-pane1">
+                            <div class="row g-3 row-cols-xl-4 row-cols-lg-3 row-cols-2 row-cols-md-2 mt-2">
+                                
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-danger">Sale</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-1.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true"  data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative shop-grid">
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-8.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-success">14%</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-2.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-3.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-danger">Hot</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-4.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-danger">Sale</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-5.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-danger">Sale</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-6.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-success">14%</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-7.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-8.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card card-product">
+                                        <div class="card-body card-desc">
+                                            <div class="text-center position-relative ">
+                                                <div class=" position-absolute top-0 start-0">
+                                                    <span class="badge bg-danger">Sale</span>
+                                                </div>
+                                                <a href="product-single.html">
+                                                    <img src="images/product/product-img-10.jpg" alt="" class="w-100 mb-2">
+                                                </a>
+                                                <div class="card-product-action icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View" data-bs-original-title="Quick View"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist" data-bs-original-title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+            
+                                            <div class="desc-head">
+                                                <a href="#!">Đồ ăn nhẹ & ăn vặt</a>
+                                            </div>
+                                            <h2 class="fs-default">Haldiram's Sev Bhujia
+                                                <a href="product-single.html"></a>
+                                            </h2>
+                                            <div>
+                                                <small class="text-warning">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </small>
+                                                <span class="small text-sub">4.5 (149)</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                                <div class="price-group">
+                                                    <span class="pe-1 price">52.000đ</span>
+                                                    <span class="text-decoration-line-through">80.000đ</span>
+                                                </div>
+                                                <div class="sm-txt add">
+                                                    <a href="#!" class="btn-sm primary-btn "><i class="fa-solid fa-plus pe-2"></i>Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+        
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="shop-tab-pane2">
+                            <div class="row g-4 row-cols-1 mt-2">
+                                <div class="col">
+                                   <div class="card card-product">
+                                      <div class="card-body">
+                                         <div class="row align-items-center">
+                                            <div class="col-md-4 col-12">
+                                               <div class="text-center position-relative">
+                                                  <div class="position-absolute top-0">
+                                                     <span class="badge bg-danger">Sale</span>
+                                                  </div>
+                                                  <a href="product-single.html">
+                                                     <img src="images/product/product-img-1.jpg" alt="" class="mb-3 img-fluid">
+                                                  </a>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-8 col-12 flex-grow-1 card-desc">
+                                               <div class="text-small mb-1">
+                                                  <a href="#!" class="text-decoration-none text-sub"><small>Đồ ăn nhẹ & ăn vặt</small></a>
+                                               </div>
+                                               <h2 class="fs-default"><a href="product-single.html" class="text-title">Haldiram's Sev Bhujia</a></h2>
+                                               <div>
+                                                    <small class="text-warning">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </small>
+                                                    <span class="small text-sub">4.5 (149)</span>
+                                                </div>
+                                               <div class="mt-6">
+                                                  <div>
+                                                     <span class="price pe-1">52.000đ</span>
+                                                     <span class="text-decoration-line-through text-sub">80.000đ</span>
+                                                  </div>
+                                                <div class="mt-3 icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                        <i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Quick View"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                                  <div class="mt-2">
+                                                    <a href="#!" class="btn btn-primary"> 
+                                                        <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Add to cart
+                                                     </a>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                               
+                                <div class="col">
+                                   <div class="card card-product">
+                                      <div class="card-body">
+                                         <div class="row align-items-center">
+                                            <div class="col-md-4 col-12">
+                                               <div class="text-center position-relative">
+                                                  <a href="shop-single.html">
+                                                     <img src="images/product/product-img-2.jpg" alt="" class="mb-3 img-fluid">
+                                                  </a>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-8 col-12 flex-grow-1 card-desc">
+
+                                               <div class="text-small mb-1">
+                                                  <a href="#!" class="text-decoration-none text-sub"><small>Đồ ăn nhẹ & ăn vặt</small></a>
+                                               </div>
+                                               <h2 class="fs-default"><a href="product-single.html" class="text-title text-decoration-none">NutriChoice Digestive</a></h2>
+                                               <div>
+                                                    <small class="text-warning">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </small>
+                                                    <span class="small text-sub">4.5 (149)</span>
+                                                </div>
+                                               <div class="mt-6">
+                                                  <div>
+                                                    <span class="price pe-1">52.000đ</span>
+                                                    <span class="text-decoration-line-through text-sub">80.000đ</span>
+                                                 </div>
+                                                  <div class="mt-3 icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                        <i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Quick View"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                                  <div class="mt-2">
+                                                    <a href="#!" class="btn btn-primary"> 
+                                                        <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Add to cart
+                                                     </a>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+
+                                <div class="col">
+                                   <div class="card card-product">
+                                      <div class="card-body">
+                                         <div class="row align-items-center">
+                                            <div class="col-md-4 col-12">
+                                               <div class="text-center position-relative ">
+                                                  <div class="position-absolute top-0">
+                                                     <span class="badge bg-success">14%</span>
+                                                  </div>
+                                                  <a href="product-single.html">
+                                                     <img src="images/product/product-img-10.jpg" alt="" class="mb-3 img-fluid">
+                                                  </a>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-8 col-12 flex-grow-1 card-desc">
+                                               <div class="text-small mb-1">
+                                                  <a href="#!" class="text-decoration-none text-sub"><small>Đồ ăn nhẹ & ăn vặt</small></a>
+                                               </div>
+                                               <h2 class="fs-default"><a href="product-single.html" class="text-title">Cadbury 5 Star Chocolate</a></h2>
+                                               <div>
+                                                    <small class="text-warning">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </small>
+                                                    <span class="small text-sub">5 (69)</span>
+                                                </div>
+                                               <div class="mt-6">
+                                                  <div>
+                                                    <span class="price pe-1">52.000đ</span>
+                                                    <span class="text-decoration-line-through text-sub">80.000đ</span>
+                                                 </div>
+                                                  <div class="mt-3 icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                        <i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Quick View"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                                  <div class="mt-2">
+                                                    <a href="#!" class="btn btn-primary"> 
+                                                        <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Add to cart
+                                                    </a>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+
+                                <div class="col">
+                                   <div class="card card-product">
+                                      <div class="card-body">
+                                         <div class="row align-items-center">
+                                            <div class="col-md-4 col-12">
+                                               <div class="text-center position-relative">
+                                                  <a href="product-single.html">
+                                                     <img src="images/product/product-img-4.jpg" alt="" class="mb-3 img-fluid">
+                                                  </a>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-8 col-12 flex-grow-1 card-desc">
+                                               <div class="text-small mb-1">
+                                                  <a href="#!" class="text-decoration-none text-sub"><small>Đồ ăn nhẹ & ăn vặt</small></a>
+                                               </div>
+                                               <h2 class="fs-default"><a href="#!" class="text-title">Onion Flavour Potato</a></h2>
+                                               <div>
+                                                    <small class="text-warning">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </small>
+                                                    <span class="small text-sub">4.5 (149)</span>
+                                                </div>
+                                               <div class="mt-6">
+                                                  <div>
+                                                    <span class="price pe-1">52.000đ</span>
+                                                    <span class="text-decoration-line-through text-sub">80.000đ</span>
+                                                 </div>
+                                                  <div class="mt-3 icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                        <i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Quick View"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                                  <div class="mt-2">
+                                                     <a href="#!" class="btn btn-primary"> 
+                                                        <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Add to cart
+                                                     </a>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+
+                                <div class="col">
+                                   <div class="card card-product">
+                                      <div class="card-body">
+                                         <div class="row align-items-center">
+                                            <div class="col-md-4 col-12">
+                                               <div class="text-center position-relative ">
+                                                  <a href="product-single.html">
+                                                     <img src="images/product/product-img-5.jpg" alt="" class="mb-3 img-fluid">
+                                                  </a>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-8 col-12 flex-grow-1 card-desc">
+                                               <div class="text-small mb-1">
+                                                  <a href="#!" class="text-decoration-none text-sub"><small>Thực phẩm ăn liền</small></a>
+                                               </div>
+                                               <h2 class="fs-default"><a href="product-single.html" class="text-title ">Salted Instant Popcorn</a></h2>
+                                               <div>
+                                                    <small class="text-warning">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </small>
+                                                    <span class="small text-sub">4.5 (149)</span>
+                                                </div>
+                                               <div class="mt-6">
+                                                  <div>
+                                                    <span class="price pe-1">52.000đ</span>
+                                                    <span class="text-decoration-line-through text-sub">80.000đ</span>
+                                                 </div>
+                                                  <div class="mt-3 icon-group">
+                                                    <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                        <i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Quick View"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" data-bs-original-title="Wishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+            
+                                                    <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare" data-bs-original-title="Compare">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                    </a>
+                                                </div>
+                                                  <div class="mt-2">
+                                                    <a href="#!" class="btn btn-primary"> 
+                                                        <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Add to cart
+                                                    </a>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="row mt-5">
+                        <div class="col">
+                            <nav >
+                                <ul class="pagination mb-5 justify-content-center">
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                      </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>    
+
+    </main>
+
+     <!-- Modal -->
+     <div class="modal fade" id="quickViewModal" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body p-5">
+              <div class="position-absolute top-0 end-0 me-3 mt-3">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="row">
+                <section class="col-xl-6">
+                    <img src="images/product/product-single-img-1.jpg" alt="" class="w-100 rounded mb-3" >
+                </section>
+
+                <section class="col-xl-6">
+                    <div class=" ps-lg-3 pr-detail">
+                        <a href="#!" class="mb-1 mb-xl-1 d-block text-primary">Bánh quy nướng</a>
+                        <h1 class="h3 text-title fw-6">Napolitanke Ljesnjak</h1>
+                        <div class=" mb-2">                              
+                                <small class="text-warning">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </small>
+                                <a href="#!" class="text-primary">(30 reviews)</a>
+                        </div>
+                        <div class="h6 pr-price">
+                            <span class="fw-bold text-strong">150.000 đ </span>
+                            <span class="text-decoration-line-through text-sub">180.000 đ </span>
+                            <span>
+                                <small class="fs-default ms-2 text-danger">26% Off</small>
+                                <small class="fs-default ms-2 text-primary">Còn hàng</small>
+                            </span>
+                            <hr class="my-xl-3 my-lg-2">
+                            <div>
+                                <button type="button" class="btn btn-outline-secondary fs-default text-sub py-1 px-2">250g</button>
+                                <button type="button" class="btn btn-outline-secondary fs-default text-sub py-1 px-2">500g</button>
+                                <button type="button" class="btn btn-outline-secondary fs-default text-sub py-1 px-2">1kg</button>
+                            </div>
+
+                            <div class="qunt-btn d-flex input-group mt-3">
+                                <button class="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" value="1" class="text-center quanty">
+                                <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="pr-action row justify-content-start g-2 align-items-center mt-2">
+                            <div class="col-xxl-4 col-lg-4 col-md-5 col-5 d-grid">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Mua ngay
+                                </button>
+                            </div>
+                            <div class="col-md-4 col-4 icon-group">
+                                <a href="#!" class="btn btn-light">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </a>
+                                <a href="#!" class="btn btn-light">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr class="my-xl-3 my-lg-2">
+
+                        <div class="pr-info">
+                            <table class="table table-borderless mb-0">
+                                <tbody>
+                                    <tr >
+                                        <td class="py-1">Mã sản phẩm</td>
+                                        <td class="py-1">PD 001</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="py-1">Loại</td>
+                                        <td class="py-1">Bánh </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="py-1">Giao hàng</td>
+                                        <td class="py-1">Trong vòng 4 giờ</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-section">
+        <div class="container">
+            <div class="row g-4 py-4">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <h6 class="footer-title mb-4">Danh mục</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Rau & củ</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Bữa sáng & đồ ăn liền</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tiệm bánh & bánh quy</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Atta, cơm & dal</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Nước sốt & phết</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Hữu cơ & sành ăn</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Chăm sóc trẻ</a></li>
+                                <li class="nav-item mb-2"><a href="#!"  class="nav-link">Vệ sinh thiết yếu</a></li>
+                                <li class="nav-item mb-2"><a href="#!"  class="nav-link">Chăm sóc cá nhân</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Rau & củ</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Bữa sáng & đồ ăn liền</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tiệm bánh & bánh quy</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Atta, cơm & dal</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Nước sốt & phết</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Hữu cơ & sành ăn</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Chăm sóc trẻ</a></li>
+                                <li class="nav-item mb-2"><a href="#!"  class="nav-link">Vệ sinh thiết yếu</a></li>
+                                <li class="nav-item mb-2"><a href="#!"  class="nav-link">Chăm sóc cá nhân</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <h6 class="mb-4 footer-title">Về chúng tôi</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Công ty</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Giới thiệu</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tin tức</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Dịch vụ khách hàng</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Về chúng tôi</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <h6 class="mb-4 footer-title">Về chúng tôi</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Công ty</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Giới thiệu</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tin tức</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Dịch vụ khách hàng</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Về chúng tôi</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <h6 class="mb-4 footer-title">Về chúng tôi</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Công ty</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Giới thiệu</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tin tức</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Dịch vụ khách hàng</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Về chúng tôi</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <h6 class="mb-4 footer-title">Về chúng tôi</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Công ty</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Giới thiệu</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Tin tức</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Dịch vụ khách hàng</a></li>
+                                <li class="nav-item mb-2"><a href="#!" class="nav-link">Về chúng tôi</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="border-top py-4">
+                <div class="row align-item-center">
+                    <div class="col-lg-5 text-lg-start text-center mb-2 mb-lg-0">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item text-dark">Các đối tác thanh toán</li>
+                            <li class="list-inline-item">
+                                <a href="#"><img src="images/payment/amazonpay.svg" alt=""></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><img src="images/payment/american-express.svg" alt=""></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><img src="images/payment/paypal.svg" alt=""></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><img src="images/payment/mastercard.svg" alt=""></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><img src="images/payment/visa.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7 mt-4 mt-md-0">
+                        <ul class="list-inline mb-0 text-lg-end text-center">
+                            <li class="list-inline-item mb-2 mb-md-0 text-dark">Nhận giao hàng với FreshCart</li>
+                            <li class="list-inline-item ms-4 apps">
+                                <a href="#">
+                                    <img src="images/payment/appstore-btn.svg" alt="" style="width: 140px;">
+                                </a>
+                            </li>
+                            <li class="list-inline-item apps">
+                                <a href="#">
+                                    <img src="images/payment/googleplay-btn.svg" alt="" style="width: 140px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top py-4">
+                <div class="row align-item-center">
+                    <div class="col-md-6">
+                        <span class="small text-muted">© 2022 </span>
+                        <span class="small text-muted">- 2024 FreshCart eCommerce HTML Template. All rights reserved</span>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-inline text-md-end mb-0 small mt-3 mt-md-0">
+                            <li class="list-inline-item text-muted">Theo dõi chúng tôi trên</li>
+                            <li class="list-inline-item me-1 btn-footer"><a href="#"><i class="fa-brands fa-facebook footer-brand"></i></li></a>
+                            <li class="list-inline-item me-1 btn-footer"><a href="#"><i class="fa-brands fa-twitter footer-brand"></i></a></li>
+                            <li class="list-inline-item btn-footer"><a href="#"><i class="fa-brands fa-instagram footer-brand"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/price_range_script.js"></script>
+    <script src="js/countdown-timer.js"></script>
+    <script src="js/jquery.ez-plus.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

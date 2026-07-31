@@ -1,0 +1,39 @@
+.active2 {
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+}
+
+.zoom-left .zoom-img {
+  position: static;
+  height: auto;
+}
+@media screen and (max-width: 1199px) {
+  .zoom-left .zoom-img {
+    width: 50%;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 991px) {
+  .zoom-left .zoom-img {
+    width: 100%;
+  }
+}
+.zoom-left #gallery_01 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+}
+.zoom-left #gallery_01 .elevatezoom-gallery {
+  display: block;
+  width: 23%;
+  margin: 0 1%;
+}
+.zoom-left #gallery_01 .elevatezoom-gallery img {
+  width: 100%;
+}
+
+.zoomWrapper {
+  height: auto;
+  width: 100% !important;
+}/*# sourceMappingURL=freshcart.css.map */
